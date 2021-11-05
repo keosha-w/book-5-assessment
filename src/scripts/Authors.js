@@ -5,7 +5,7 @@ import { getAuthors, setAuthorId } from "./dataAccess.js"
 const mainContainer = document.querySelector("#container")
 
 const convertAuthorsToListElement = (author) => {
-    return `<option id="author" value="${author.id}">${author.name}</option>`
+    return `<option id="author--${author.id}" value="${author.id}">${author.name}</option>`
 }
 
 export const Authors = () => {
@@ -13,7 +13,7 @@ export const Authors = () => {
 
     let html = `
 
-    <select>
+    <select id="author--">
         <option value="0">Choose an Author</option>
         ${
             authors.map(convertAuthorsToListElement).join("")
@@ -25,7 +25,7 @@ export const Authors = () => {
 
 //change event - when user selects author - authorName sent to application state
 mainContainer.addEventListener("change", changeEvent => {
-    if (changeEvent.target.id === "author") {
+    if (changeEvent.target.id.startsWith("author--")) {
         setAuthorId(parseInt(changeEvent.target.value))
     }
 })

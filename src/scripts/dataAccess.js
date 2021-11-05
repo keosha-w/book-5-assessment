@@ -13,6 +13,24 @@ const applicationState = {
     }
 }
 
+export const SentLetter = () => {
+    const date = new Date().toLocaleDateString()
+    applicationState.userChoices.dateSent = date
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(applicationState.userChoices)
+    }
+
+
+    return fetch(`${API}/sentLetters`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+
+        })
+}
 
 //Fetch - getting Authors
 const API = "http://localhost:8088"
@@ -69,5 +87,8 @@ export const setTopicId = (id) => {
 }
 export const setRecipientId = (id) => {
     applicationState.userChoices.recipientId = id
+}
+export const setLetterStr = (str) => {
+    applicationState.userChoices.letter = str
 }
 
