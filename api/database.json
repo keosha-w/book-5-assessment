@@ -1,0 +1,70 @@
+{
+    "authors": [
+        {
+            "id": 1,
+            "emailAddress": "maggie@gmail.com",
+            "name": "Maggie Stiefvater"
+        },
+        {
+            "id": 2,
+            "emailAddress": "warden@gmail.com",
+            "name": "J.R Ward"
+        },
+        {
+            "id": 3,
+            "emailAddress": "tdue@gmail.com",
+            "name": "Tananarive Due"
+        },
+        {
+            "id": 4,
+            "emailAddress": "hark@gmail.com",
+            "name": "Deborah Harkness"
+        }
+    ],
+    "topics": [
+        {
+            "id": 1,
+            "topic": "Business"
+        },
+        {
+            "id": 2,
+            "topic": "Friendly"
+        },
+        {
+            "id": 3,
+            "topic": "Family"
+        },
+        {
+            "id": 4,
+            "topic": "Congratulations"
+        },
+        {
+            "id": 5,
+            "topic": "Condolences"
+        }
+    ],
+    "recipients": [
+        {
+            "id": 1,
+            "emailAddress": "blue@sargentpsychics.com",
+            "name": "Blue Sargent"
+        },
+        {
+            "id": 2,
+            "emailAddress": "v@bdb.com",
+            "name": "Vishous"
+        },
+        {
+            "id": 3,
+            "emailAddress": "jessica@livingblood.com",
+            "name": "Jessica"
+        },
+        {
+            "id": 4,
+            "emailAddress": "dclairmont@weaver.com",
+            "name": "Diana Bishop"
+        }
+        
+    ],
+    "sentletters": []
+}
