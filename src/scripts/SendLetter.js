@@ -16,6 +16,6 @@ export const SendLetter = () => {
 //change event - when user selects author - authorName sent to application state
 mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "send") {
-        
+        SentLetter()
     }
 })

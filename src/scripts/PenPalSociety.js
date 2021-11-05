@@ -1,7 +1,7 @@
 //Responsibility -- generate HTML for the overll webpage
 
 import { Authors } from "./Authors.js"
-import { Letter } from "./letter.js"
+import { Letter, RenderSentLetter } from "./letter.js"
 import { Recipients } from "./Recipients.js"
 import { SendLetter } from "./SendLetter.js"
 import { Topics } from "./Topics.js"
@@ -16,6 +16,7 @@ export const PenPalSociety = () => {
         ${Topics()}
         ${Recipients()}
         ${SendLetter()}
+        ${RenderSentLetter()}
         </section>
     `
 }

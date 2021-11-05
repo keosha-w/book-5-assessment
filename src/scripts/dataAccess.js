@@ -28,6 +28,7 @@ export const SentLetter = () => {
     return fetch(`${API}/sentLetters`, fetchOptions)
         .then(response => response.json())
         .then(() => {
+            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
 
         })
 }
@@ -64,6 +65,16 @@ export const fetchRecipients = () => {
             }
         )
 }
+//Fetch - getting SentLetters
+export const fetchSentLetters = () => {
+    return fetch(`${API}/sentLetters`)
+        .then(response => response.json())
+        .then(
+            (sentLetters) => {
+                applicationState.sentLetters = sentLetters
+            }
+        )
+}
 
 //export function that returns a copy of the application state authors
 export const getAuthors = () => {
@@ -76,6 +87,10 @@ export const getTopics = () => {
 //export function that returns a copy of the application state recipients
 export const getRecipients = () => {
     return applicationState.recipients.map(recipient => ({...recipient}))
+}
+//export function that returns a copy of the application state sentLetters
+export const getSentLetters = () => {
+    return applicationState.sentLetters.map(sentLetter => ({...sentLetter}))
 }
 
 

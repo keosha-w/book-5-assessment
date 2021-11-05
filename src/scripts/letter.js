@@ -1,6 +1,6 @@
 //Responsibility - to generate the HTML for the letter input
 
-import { setLetterStr } from "./dataAccess.js"
+import { fetchSentLetters, getSentLetters, setLetterStr } from "./dataAccess.js"
 
 const mainContainer = document.querySelector("#container")
 
@@ -20,3 +20,24 @@ mainContainer.addEventListener("change", changeEvent => {
         setLetterStr(changeEvent.target.value)
     }
 })
+
+export const RenderSentLetter = () => {
+    const sentLettersList = fetchSentLetters()
+
+    return `
+        <label for="topics"><h3>Topics</h3></label>
+        ${
+            sentLettersList.map(
+                (letter) => {
+                    return `
+                    <div>
+                        <article id="sentLetter--${letter.id}"> ${letter.letter}
+                        
+                        
+                        </article>
+                    </div>
+                    `
+                }).join("")
+        }
+    `
+}
