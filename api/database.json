@@ -81,6 +81,22 @@
       "recipientId": 3,
       "dateSent": "11/5/2021",
       "id": 2
+    },
+    {
+      "authorId": 1,
+      "letter": "Hey This is a letter!",
+      "topicId": 2,
+      "recipientId": 1,
+      "dateSent": "11/6/2021",
+      "id": 3
+    },
+    {
+      "authorId": 2,
+      "letter": "letter",
+      "topicId": 4,
+      "recipientId": 2,
+      "dateSent": "11/6/2021",
+      "id": 4
     }
   ]
 }

@@ -5,6 +5,7 @@ const mainContainer = document.querySelector("#container")
 const applicationState = {
     authors: [],
     topics: [],
+    sentLetters: [],
     userChoices : {
         authorId: 0,
         letter: "",

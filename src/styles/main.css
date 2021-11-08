@@ -1,0 +1,21 @@
+
+@import url("form.css");
+@import url(sentLetters.css);
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea { 
+	color: #404040;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Raleway', sans-serif;
+  letter-spacing: 2px;
+}
+

@@ -16,7 +16,10 @@ export const PenPalSociety = () => {
         ${Topics()}
         ${Recipients()}
         ${SendLetter()}
-        ${RenderSentLetter()}
+        <div id="letters__sent">
+            ${RenderSentLetter()}
+        </div>
         </section>
     `
 }
+
