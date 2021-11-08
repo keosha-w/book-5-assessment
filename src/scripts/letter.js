@@ -9,7 +9,7 @@ export const Letter = () => {
     return `
         <div id="letterInput">
             <h3><label for"letterInput">Letter</label></h3>
-            <textarea id="letterInput" name="letterInput" rows="25" cols="50"></textarea>
+            <textarea id="letterInput" name="letterInput" rows="25" cols="70"></textarea>
         </div>
     `
 }
@@ -20,26 +20,8 @@ mainContainer.addEventListener("change", changeEvent => {
         setLetterStr(changeEvent.target.value)
     }
 })
-// export const RenderSentLetter = () => {
-//     const sentLettersList = getSentLetters()
-
-//     return `
-//         <label for="topics"><h3>Topics</h3></label>
-//         ${
-//             sentLettersList.map(
-//                 (letter) => {
-//                     return `
-//                     <div>
-//                         <article id="sentLetter--${letter.id}"> ${letter.letter}
 
 
-//                         </article>
-//                     </div>
-//                     `
-//                 }).join("")
-//         }
-//     `
-// }
 // generates the HTML for the sent letters on the bottom of the page
 export const RenderSentLetter = () => {
     const sentLettersList = getSentLetters()
